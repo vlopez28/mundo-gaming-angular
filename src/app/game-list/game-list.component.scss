@@ -57,14 +57,14 @@ h4{
     display: flex;
     flex-wrap: wrap;
     align-items:flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 30px;
 }
 .container-games{
     margin-top: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
     flex-direction: column;
 }
 .title-section{
