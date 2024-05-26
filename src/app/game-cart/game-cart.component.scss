@@ -1,0 +1,130 @@
+$primary: #8b27b5;
+$white: #FAF3FE;
+$black: #2B043B;
+$acento: #F69B12;
+$exit-color: #66b527;
+$error-color: #d33636;
+$grey-1: #6e5c75;
+$primary-s1: #6f1f91;
+$primary-s2: #681d88;
+$acento-l1: #f69b1280;
+$secondary-s1: #96d727;
+$primary-s3: #53176d;
+
+/*================carrito de compras===========*/
+.cart{
+    position: absolute;
+    top: 245px;
+    right: 80px;
+    //margin-right: 80px;
+    //width: 40%;
+}
+.container-cart{
+    padding-bottom: 20px;
+    background-color: $white;
+    overflow-y: scroll;
+    border: 1px solid $black;
+    //box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cart-title{
+    background-color: $primary-s3;
+    color: $white;
+    padding: 10px;
+    text-align: center;
+}
+.cart-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 25px;
+}
+.cart-body p.tx-small, .cart-body p.body2 {
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cart-item{
+    margin: 5px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart-item h4{
+    font-size: 16px;
+}
+.cart-item p.body2{
+    max-width: 200px;
+    white-space: nowrap; /*elimina saltos de linea*/
+    overflow: hidden; /*elimina el texto q se sale del contenedor*/
+    text-overflow: ellipsis; /*agrega puntos suspensivos*/
+    margin-left: 20px;
+}
+.cart-item-img{
+    background-image: url("../../assets/image/home/stumble.png");
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-size: cover;
+}
+.cart-body p.body2.item-price{
+    font-weight: 500;
+}
+.item-img-2{
+    background-image: url("../../assets/image/home/mario.jpeg");
+}
+
+
+.cart-buy img{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+.cart-buys div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cart-container-prices-btns{
+    margin: 20px;
+   
+}
+.cart-item-price{
+    margin: 0;
+}
+.cart-discount .btn-main-inactive, .cart-btns .btn-main-inactive, .cart-btns .btn-main-active{
+    background-color: $white;
+    width: 70%;
+    border-radius: 10px;
+    border: 1px solid $primary-s1;
+    height: 35px;
+    color: $primary;
+    font-size: 12px;
+}
+.cart-btns button{
+    margin: 5px 0;
+    align-items: center;
+
+}
+.cart-btns .btn-main-active{
+    background-color: $primary;
+    color: $white;
+}
+.cart-btns {
+    margin: 10px 0;
+
+}
+/*========configuracion scroll vertical=========*/
+
+/* ver ocultar scroll para chrome, safari y opera */
+.menu-side::-webkit-scrollbar, .container-cart::-webkit-scrollbar{
+    display: none;
+}
+/* ocultar scroll para IE edge firefox */
+.menu-side, .container-cart{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

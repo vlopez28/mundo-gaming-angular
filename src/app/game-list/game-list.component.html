@@ -1,0 +1,51 @@
+
+
+<section class="container-games">
+    <h1 class="title-section">Juegos más elegidos</h1>
+    <div class="game-list">
+        @for(game of games; track game.title){
+            <article [ngClass]="getClass(game)">
+                <figure>
+                <img class="card-img" [src]="game.image" [alt]='game.title'>
+                </figure>
+                <div class="card-body">
+                    <div class="card-header">
+                        <p class="card-title body-bold">{{game.title}}</p>
+                        <div class="card-price">
+                            @if(game.type == 'gratis'){
+                                <p class="price-off ">${{game.price_normal}}</p>
+                                <h4 class="price-normal">$0</h4>
+                            }@else if(game.type == 'off'){
+                                <p class="price-off ">${{game.price_normal}}</p>
+                                <h4 class="price-normal">${{game.price_off}}</h4>
+                            }
+                            @else{
+                                <p class="price-off">${{game.price_off}}</p>
+                                <h4 class="price-normal">${{game.price_normal}}</h4>
+                            }
+                            
+                        </div>
+                    </div>
+                    <p class="card-description tx-small">{{game.description}}
+                    </p>
+                </div>
+                <div class="card-btns">
+                    <div class="rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <button class="card-btn-buy tx-btn"></button>
+
+                </div>
+            </article>
+        }
+    </div>
+   
+    
+</section>
+
+
+
