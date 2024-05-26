@@ -53,7 +53,7 @@ h4{
 }
 .game-list{
     
-    margin: 20px 10px;
+    margin: 0px 10px;
     display: flex;
     flex-wrap: wrap;
     align-items:flex-start;
@@ -61,7 +61,7 @@ h4{
     gap: 30px;
 }
 .container-games{
-    margin-top: 50px;
+  
     display: flex;
     justify-content: center;
     
@@ -415,3 +415,6 @@ h4{
 .close {
     visibility: hidden;
 }
+// .star{
+//     color: $exit-color;
+// }
