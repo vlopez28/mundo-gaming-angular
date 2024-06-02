@@ -1,19 +1,32 @@
 
     <header id="header-home">
         <figure>
-            <img class="logo-header" src="../assets/image/home/logoVioletaOscuro.png" alt="logo">
+            
+            <img [routerLink]="['/']" class="logo-header" src="../assets/image/home/logoVioletaOscuro.png" alt="logo">
         </figure>
-        <nav>
+        <!-- <nav>
             <ul>
-                <a>Home</a>
-                <a>About</a>
+                <a [routerLink]="['/']">Home</a>
+                <a [routerLink]="['/about']">About</a>
                 <a>Contact</a>
             </ul>
-        </nav>
+        </nav> -->
+         <div class="container-search">
+                <img src="../assets/image/icons/lupaNegra.png" alt="search">
+                <input class="input-search" type="text" placeholder="Busca tu juego">
+            </div>
+        <div class="container-search-login">
+           
+            <button [routerLink]="['/offers']" class="btn-header-offer">
+                <img src="../assets/image/icons/iconOffer.svg" alt="offer"> Ofertas
+            </button>
+            <button [routerLink]="['/log-in']" class="log-in">REGISTRATE</button>
+            <button [routerLink]="['/sign-in']" class="sign-in">INGRESAR</button>
+        </div>
+        
     </header>
     <section class="container-games-cart">
-        <app-game-list class="game-list"></app-game-list>
-        <app-game-cart class="game-cart"></app-game-cart>
+        <router-outlet></router-outlet>
     </section>
     
 

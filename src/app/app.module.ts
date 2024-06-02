@@ -6,17 +6,30 @@ import { AppComponent } from './app.component';
 import { GameListComponent } from './game-list/game-list.component';
 import { GameComponent } from './game/game.component';
 import { GameCartComponent } from './game-cart/game-cart.component';
+import { GameAboutComponent } from './game-about/game-about.component';
+import { GameHomeComponent } from './game-home/game-home.component';
+import { GameOffersComponent } from './game-offers/game-offers.component';
+import { GameLogInComponent } from './game-log-in/game-log-in.component';
+import { GameSignInComponent } from './game-sign-in/game-sign-in.component';
+import { ServerModule } from '@angular/platform-server';
+import { HttpClient, HttpClientModule, provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameListComponent,
     GameComponent,
-    GameCartComponent
+    GameCartComponent,
+    GameAboutComponent,
+    GameHomeComponent,
+    GameOffersComponent,
+    GameLogInComponent,
+    GameSignInComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()

@@ -151,13 +151,13 @@ h4{
         flex-direction: column;
         gap: 2px;
         position: absolute;
-        top: -3px;
+        top: -7px;
     }
     .card-body h4{
         color: $exit-color;
     }
     .card-body h4.price-normal {
-        margin-top: -10px;
+        margin-top: -5px;
     }
 }
 
@@ -222,7 +222,7 @@ h4{
 }
 
 .card-body p.body-bold {
-    font-weight: 700;
+    font-weight: 800;
 }
 .card-header{
     margin: 5px 5px 0 5px;
@@ -349,26 +349,29 @@ h4{
     cursor: pointer;
 }
 
-.card-btn-buy:focus{
+.card-btn-buy-bought{
     background-image: url("../../assets/image/icons/iconCarroNegro.svg");
     background-size: 35px 20px;
     background-position: left;
+    background-repeat: no-repeat;
     background-color: $acento-l1;
     width: 60px;
+    height: 25px;
+    border-radius: 10px;
     border: 1px solid $acento-l1;
-
 }
-.card-btn-buy:focus::after{
+.card-btn-buy-bought::after{
     content: '';
     position: absolute;
     height: 20px;
     width: 20px;
     background: url('../../assets/image/icons/iconCheck.svg') no-repeat center center;
     background-size: 30px 20px; 
-    top: 0;
-    right: 2px;
+    top: 4px;
+    right: 4px;
     z-index: 100;
 }
+
 
 /*card ya es tuyo!*/
 .ya-es-tuyo{
@@ -415,6 +418,18 @@ h4{
 .close {
     visibility: hidden;
 }
-// .star{
-//     color: $exit-color;
-// }
+.rating button{
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.filled {
+    color: $exit-color;
+  }
+  
+  .empty {
+    color: $black;
+  }
+  

@@ -5,4 +5,6 @@ export interface Game {
     description: string;
     image: string;
     type: string;
+    qualification: number;
+    bought: boolean;
 }

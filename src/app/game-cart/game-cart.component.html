@@ -6,67 +6,60 @@
         </div>
         <div class="cart-body">
             <div class="cart-buys">
-                <div class="cart-item">
-                    <div>
-                        <div class="cart-item-img"></div>
-                        <p class="body2">Stumble Guys </p>
+                @for(game of cartList$ | async; track game.title){
+                    <div class="cart-item">
+                        <div>
+                            <img class="cart-item-img" [src]="game.image" [alt]='game.title'>
+                            <p class="body2">{{game.title}} </p>
+                        </div>
+                        <div>
+                            @if(game.type == 'gratis'){
+                                <p class="body2 item-price">$0</p>
+                                <button (click)="removeCart(game)"><img src="../../assets/image/icons/iconPapelera.svg" alt="papelera"></button>
+                                
+                            } 
+                            @else if (game.type == 'off'){
+                                <p class="body2 item-price">${{game.price_off}}</p>
+                                <button (click)="removeCart(game)"><img src="../../assets/image/icons/iconPapelera.svg" alt="papelera"></button>
+                                
+                            } 
+                            @else{
+                                <p class="body2 item-price">${{game.price_normal}}</p>
+                                <button (click)="removeCart(game)"><img src="../../assets/image/icons/iconPapelera.svg" alt="papelera"></button>
+                                
+                            }
+                        </div>
                     </div>
-                    <div>
-                        <p class="body2 item-price">$3599</p>
-                        <img src="../../assets/image/icons/iconPapelera.svg" alt="papelera">
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div>
-                        <div class="cart-item-img item-img-2"></div>
-                        <p class="body2">Fall Guys </p>
-                    </div>
-                    <div>
-                        <p class="body2 item-price">$3599</p>
-                        <img src="../../assets/image/icons/iconPapelera.svg" alt="papelera">
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div>
-                        <div class="cart-item-img"></div>
-                        <p class="body2">Stumble Guys </p>
-                    </div>
-                    <div>
-                        <p class="body2 item-price">$3599</p>
-                        <img src="../../assets/image/icons/iconPapelera.svg" alt="papelera">
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div>
-                        <div class="cart-item-img"></div>
-                        <p class="body2">Stumble Guys </p>
-                    </div>
-                    <div>
-                        <p class="body2 item-price">$3599</p>
-                        <img src="../../assets/image/icons/iconPapelera.svg" alt="papelera">
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div>
-                        <div class="cart-item-img"></div>
-                        <p class="body2">Stumble Guys </p>
-                    </div>
-                    <div>
-                        <p class="body2 item-price">$3599</p>
-                        <img src="../../assets/image/icons/iconPapelera.svg" alt="papelera">
-                    </div>
-                </div>
+                }
+               
+                
             </div>
             <div class="cart-container-prices-btns">
                 <div class="cart-item cart-item-price">
                     <h4>Total</h4>
-                    <h4>$7198</h4>
+                    <h4>${{totalCart$ | async}}</h4>
                 </div>
                 <div class="cart-btns">
-                    <button class="btn-main-active">Finalizar Compra</button>
+                    <button (click)="togglePopup()" class="btn-main-active">Finalizar Compra</button>
                 </div>
             </div>
+            
 
         </div>
+    </div>
+</section>
+<section  [ngClass]="{'popup': isPopupOpen, 'close': !isPopupOpen}">
+    <div class="popup-content" >
+        <button (click)="togglePopup()" class="btn-close"></button>
+        <h3>Deseas finalizar tu compra?</h3>
+        <div class="cart-item cart-item-price">
+            <h4>Total</h4>
+            <h4>${{totalCart$ | async}}</h4>
+        </div>
+        <div>
+            <button (click)="finalBuy()" class="btn-final-buy">Si</button>
+            <button (click)="togglePopup()" class="btn-final-buy">No</button>
+        </div>
+        
     </div>
 </section>
