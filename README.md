@@ -29,3 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Api utilizada
 Para mockear los datos use la siguiente pag: https://app.mockfly.dev
 y la url es la siguiente: "https://api.mockfly.dev/mocks/ab7b15ac-be18-472c-9f05-df668d1fa8c9/api/games"
+
+## Stackblitz
+https://stackblitz.com/~/github.com/vlopez28/mundo-gaming-angular
+
