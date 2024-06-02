@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Game } from '../game-list/Game';
 import { GameCartService } from '../game-cart.service';
 import { Observable } from 'rxjs';
@@ -8,12 +8,14 @@ import { Observable } from 'rxjs';
   templateUrl: './game-cart.component.html',
   styleUrl: './game-cart.component.scss'
 })
-export class GameCartComponent implements OnInit {
+export class GameCartComponent {
+  //en el template "me suscribo"
   cartList$: Observable<Game[]>;
   totalCart$: Observable<number>;
   isPopupOpen: boolean = false;
 
   constructor(private gameService: GameCartService){
+    //convierte el subject en observable de solo lectura
     this.cartList$ = gameService.cartList.asObservable();
     this.totalCart$ = gameService.totalCart.asObservable();
   }
@@ -37,10 +39,7 @@ export class GameCartComponent implements OnInit {
   finalBuy(): void{
     this.gameService.finalToBuy();
     this.isPopupOpen = !this.isPopupOpen;
-    console.log(this.cartList$);
   }
-  ngOnInit(): void {
-      
-  }
+ 
 
 }

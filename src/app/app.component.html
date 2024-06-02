@@ -4,16 +4,14 @@
             
             <img [routerLink]="['/']" class="logo-header" src="../assets/image/home/logoVioletaOscuro.png" alt="logo">
         </figure>
-        <!-- <nav>
-            <ul>
-                <a [routerLink]="['/']">Home</a>
-                <a [routerLink]="['/about']">About</a>
-                <a>Contact</a>
-            </ul>
-        </nav> -->
          <div class="container-search">
                 <img src="../assets/image/icons/lupaNegra.png" alt="search">
-                <input class="input-search" type="text" placeholder="Busca tu juego">
+                <input 
+                    class="input-search" 
+                    type="text" 
+                    placeholder="Busca tu juego"
+                    (input) = "filter($event)"
+                >
             </div>
         <div class="container-search-login">
            

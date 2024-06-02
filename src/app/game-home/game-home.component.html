@@ -1,6 +1,11 @@
 
 <section class="container-games-cart">
-    <app-game-list class="game-list"></app-game-list>
-    <app-game-cart class="game-cart"></app-game-cart>
+    @if(cartListIsEmpty$ | async ){
+        <app-game-list class="game-list"></app-game-list>
+        
+    } @else{
+        <app-game-list class="game-list"></app-game-list>
+        <app-game-cart class="game-cart"></app-game-cart>
+    }
 </section>
 

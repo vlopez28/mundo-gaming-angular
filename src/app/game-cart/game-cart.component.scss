@@ -19,6 +19,17 @@ $primary-s3: #53176d;
     border-radius: 10px;
     //box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.25);
 }
+.title-section{
+    font-weight: bolder;
+    margin-bottom: 30px;
+    color: $black;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: var(--font);
+    font-style: normal;
+    line-height: normal;
+    font-size: 26px;
+}
 
 .cart-title{
     background-color: $primary-s3;
@@ -65,7 +76,7 @@ $primary-s3: #53176d;
     background-size: cover;
 }
 .cart-body p.body2.item-price{
-    font-weight: 500;
+    font-weight: 600;
 }
 .item-img-2{
     background-image: url("../../assets/image/home/mario.jpeg");
