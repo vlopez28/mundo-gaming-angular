@@ -1,4 +1,9 @@
 # MundoGaming
+
+## Information
+López Victoria Soledad; 33908623; vickylopez2828@gmail.com; Sede Tandil
+
+## Project
 Mundo Gaming is a web application designed for video game enthusiasts. Our platform allows users to browse, select, and purchase a wide variety of video games. Whether you're into action, adventure or strategy games, Mundo Gaming has something for everyone.
 
 This project was generated wit [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
