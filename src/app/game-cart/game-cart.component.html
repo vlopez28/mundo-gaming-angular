@@ -40,7 +40,7 @@
                     <h4>${{totalCart$ | async}}</h4>
                 </div>
                 <div class="cart-btns">
-                    <button (click)="togglePopup()" class="btn-main-active">Finalizar Compra</button>
+                    <button (click)="togglePopup()" class="btn-main-active">Comprar</button>
                 </div>
             </div>
             
@@ -56,7 +56,7 @@
             <h4>Total</h4>
             <h4>${{totalCart$ | async}}</h4>
         </div>
-        <div>
+        <div class="container-btn-popup">
             <button (click)="finalBuy()" class="btn-final-buy">Si</button>
             <button (click)="togglePopup()" class="btn-final-buy">No</button>
         </div>

@@ -2,6 +2,7 @@
 
 <section class="container-games">
     <h1 class="title-section">Juegos más elegidos</h1>
+
     <div class="game-list">
             @for(game of games$ | async; track game.title){
                 <article [ngClass]="getClass(game)">

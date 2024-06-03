@@ -4,7 +4,7 @@
             
             <img [routerLink]="['/']" class="logo-header" src="../assets/image/home/logoVioletaOscuro.png" alt="logo">
         </figure>
-         <div class="container-search">
+        <div class="container-search">
                 <img src="../assets/image/icons/lupaNegra.png" alt="search">
                 <input 
                     class="input-search" 
@@ -12,7 +12,7 @@
                     placeholder="Busca tu juego"
                     (input) = "filter($event)"
                 >
-            </div>
+        </div>
         <div class="container-search-login">
            
             <button [routerLink]="['/offers']" class="btn-header-offer">
@@ -21,6 +21,36 @@
             <button [routerLink]="['/log-in']" class="log-in">REGISTRATE</button>
             <button [routerLink]="['/sign-in']" class="sign-in">INGRESAR</button>
         </div>
+        <div class="menu-burger" >
+            <button (click)="toggleClass()"><img src="../assets/image/icons/iconHamb.svg" alt="menu-burger"></button>
+        </div>
+        <nav id="menu-user" [ngClass]="getClassMenu()">
+            <div class="side-options">
+                <p class="body-bold name-user">Hola Ema!</p>
+                <a >
+                    <div class="option">
+                        
+                        <p class="body-bold">Ofertas</p>
+                    </div>
+                </a>
+                <a >
+                    <div class="option">
+                        <p class="body-bold">Registrate</p>
+                    </div>
+                </a>
+                <a >
+                    <div class="option">
+                        <p class="body-bold">Ingresar</p>
+                    </div>
+                </a>
+                <a >
+                    <div class="option">
+                       
+                        <p class="body-bold">Cerrar Sesión</p>
+                    </div>
+                </a>
+            </div>
+        </nav>
         
     </header>
     <section class="container-games-cart">

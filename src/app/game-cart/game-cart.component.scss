@@ -78,16 +78,16 @@ $primary-s3: #53176d;
 .cart-body p.body2.item-price{
     font-weight: 600;
 }
-.item-img-2{
-    background-image: url("../../assets/image/home/mario.jpeg");
-}
+// .item-img-2{
+//     background-image: url("../../assets/image/home/mario.jpeg");
+// }
 
 
-.cart-buy img{
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
-}
+// .cart-buy img{
+//     width: 20px;
+//     height: 20px;
+//     object-fit: cover;
+// }
 .cart-buys div{
     display: flex;
     align-items: center;
@@ -246,4 +246,89 @@ $primary-s3: #53176d;
 }
 .close{
     display: none;
+}
+@media screen and (max-width: 768px) {
+   
+    .container-cart{
+        max-width: 370px;
+        margin-right: 40px;
+    }
+    .title-section{
+        font-size: 18px;
+        text-align: left;
+    }
+    .cart-body{
+        // max-width: 230px;
+        min-width: 200px;
+        min-height: 50vh;
+    }
+
+    .cart-item h4{
+        font-size: 14px;
+    }
+    .cart-item{
+        max-width: 170px;
+    }
+    .cart-item p.body2{
+        max-width: 50px;
+        margin-left: 5px;
+        font-size: 12px;
+    }
+    .cart-item-img{
+        width: 30px;
+        height: 30px;
+    }
+   
+   
+}
+@media screen and (max-width: 425px) {
+    
+    .title-section{
+        font-size: 14px;
+        text-align: center;
+    }
+    .container-cart{
+        max-width: 280px;
+        margin-right: 0;
+    }
+    .cart-body{
+        max-width: 150px;
+        min-height: 30vh;
+        padding: 5px;
+    }
+    div.cart-item{
+        max-width: 230px;
+    }
+    .cart-item h4{
+        font-size: 14px;
+    }
+    .cart-item p.body2{
+        max-width: 50px;
+        margin-left: 5px;
+        font-size: 12px;
+    }
+    .cart-item-img{
+        width: 20px;
+        height: 20px;
+    }
+   
+    .cart-btns .btn-main-active{
+        width: 50%;
+    }
+    
+    .popup h3{
+        font-size: 18px;
+    }
+    .btn-final-buy{
+        width: 40px;
+        height: 30px; 
+        font-size: 14px;
+    }
+    .popup-content{
+        padding: 20px;
+    }
+    .container-btn-popup{
+        display: flex;
+    }
+    
 }

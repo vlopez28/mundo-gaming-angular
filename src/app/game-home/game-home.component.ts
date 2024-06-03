@@ -22,7 +22,5 @@ export class GameHomeComponent {
     this.cartListIsEmpty$ = this.cartList$.pipe(
       map((games : Game[]) => games.length === 0)
     );
-    console.log(this.cartListIsEmpty$)
-    console.log("hola",this.cartList$)
   }
 }
