@@ -1,7 +1,10 @@
 # MundoGaming
 
-## Informacion requerida
-López Victoria Soledad; 33908623; vickylopez2828@gmail.com; Sede Tandil
+## Seminario Angular 2024
+Apellido y Nombre: López Victoria Soledad  
+Dni: 33908623  
+Email: vickylopez2828@gmail.com  
+Sede: Tandil  
 
 ## Proyecto
 Mundo Gaming es una aplicación web diseñada para los entusiastas de los videojuegos. La plataforma permite a los usuarios explorar, seleccionar y comprar una amplia variedad de videojuegos. Existe juegos de acción, aventura, estrategia, entre otras.
