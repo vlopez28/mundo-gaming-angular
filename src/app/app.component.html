@@ -19,31 +19,32 @@
                 <img src="../assets/image/icons/iconOffer.svg" alt="offer"> Ofertas
             </button>
             <button [routerLink]="['/log-in']" class="log-in">REGISTRATE</button>
-            <button [routerLink]="['/sign-in']" class="sign-in">INGRESAR</button>
+            <!-- <button>Cerrar Sesion</button> -->
+            <button [routerLink]="['/sign-up']" class="sign-in">INGRESAR</button>
         </div>
         <div class="menu-burger" >
             <button (click)="toggleClass()"><img src="../assets/image/icons/iconHamb.svg" alt="menu-burger"></button>
         </div>
         <nav id="menu-user" [ngClass]="getClassMenu()">
             <div class="side-options">
-                <p class="body-bold name-user">Hola Ema!</p>
-                <a >
+                <p class="body-bold name-user">Hola!</p>
+                <a [routerLink]="['/offers']">
                     <div class="option">
                         
                         <p class="body-bold">Ofertas</p>
                     </div>
                 </a>
-                <a >
+                <a [routerLink]="['/log-in']">
                     <div class="option">
                         <p class="body-bold">Registrate</p>
                     </div>
                 </a>
-                <a >
+                <a [routerLink]="['/sign-up']">
                     <div class="option">
                         <p class="body-bold">Ingresar</p>
                     </div>
                 </a>
-                <a >
+                <a [routerLink]="['/']">
                     <div class="option">
                        
                         <p class="body-bold">Cerrar Sesión</p>

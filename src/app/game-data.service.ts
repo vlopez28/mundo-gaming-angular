@@ -2,7 +2,8 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, tap, throwError } from 'rxjs';
 import { Game } from './game-list/Game'
-const URL = 'https://api.mockfly.dev/mocks/cddadd67-897b-4d9d-afab-2a0adf7848ef/api/games';
+const URL = 'https://apimocha.com/mundogaming/api/games';
+//const URL = 'http://localhost:3000/';
 
 @Injectable({
   providedIn: 'root'
