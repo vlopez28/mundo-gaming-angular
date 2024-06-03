@@ -1,42 +1,27 @@
 # MundoGaming
 
-## Information
+## Informacion requerida
 López Victoria Soledad; 33908623; vickylopez2828@gmail.com; Sede Tandil
 
-## Project
-Mundo Gaming is a web application designed for video game enthusiasts. Our platform allows users to browse, select, and purchase a wide variety of video games. Whether you're into action, adventure or strategy games, Mundo Gaming has something for everyone.
+## Proyecto
+Mundo Gaming es una aplicación web diseñada para los entusiastas de los videojuegos. La plataforma permite a los usuarios explorar, seleccionar y comprar una amplia variedad de videojuegos. Existe juegos de acción, aventura, estrategia, entre otras.
 
-This project was generated wit [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+Este proyecto fue generado [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
 ## Api
-Our API provides video game data that you can use to develop the application. Below are the available endpoints and usage examples:
-### Page Mock API: "https://apimocha.com"
-### API URL: "https://apimocha.com/mundogaming"
-#### Endpoints
-  Get All Games
-  URL: /api/games
-  Method: GET
-  Description: Retrieves a list of all video games
+La API proporciona datos de videojuegos que se pueden usar para desarrollar la aplicación. A continuación, se detallan el endpoint disponible
+#### Pagina utilizada para hacer el Mock: "https://apimocha.com"
+#### API URL: "https://apimocha.com/mundogaming"
+##### Endpoint
+  Get All Games  
+  URL: /api/games  
+  Method: GET  
+  Description: Obtiene una lista de todos los videojuegos.
 
 ## Stackblitz
-You can use Stackblitz to quickly develop and test your application online. Here is the link to the project:
+Se puede utilizar Stackblitz para desarrollar y probar rápidamente la aplicación en línea. Enlace al proyecto:
 https://stackblitz.com/~/github.com/vlopez28/mundo-gaming-angular
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
 
