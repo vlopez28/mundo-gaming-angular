@@ -12,7 +12,7 @@ Mundo Gaming es una aplicación web diseñada para los entusiastas de los videoj
 Este proyecto fue generado [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
 ## Api
-La API proporciona datos de videojuegos que se pueden usar para desarrollar la aplicación. A continuación, se detallan el endpoint disponible
+La API proporciona datos de videojuegos que se pueden usar para desarrollar la aplicación.  
 #### Pagina utilizada para hacer el Mock: "https://apimocha.com"
 #### API URL: "https://apimocha.com/mundogaming"
 ##### Endpoint
