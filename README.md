@@ -7,7 +7,7 @@ Email: vickylopez2828@gmail.com
 Sede: Tandil  
 
 ## Proyecto
-Mundo Gaming es una aplicación web diseñada para los entusiastas de los videojuegos. La plataforma permite a los usuarios explorar, seleccionar y comprar una amplia variedad de videojuegos. Existe juegos de acción, aventura, estrategia, entre otras.
+Mundo Gaming es una aplicación web diseñada para los entusiastas de los videojuegos. La plataforma permite a los usuarios explorar, seleccionar y comprar una amplia variedad de videojuegos. Existen juegos de acción, aventura, estrategia, entre otros.
 
 Este proyecto fue generado [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
