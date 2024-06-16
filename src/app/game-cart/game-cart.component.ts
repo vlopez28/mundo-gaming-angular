@@ -21,11 +21,11 @@ export class GameCartComponent {
   }
 
   
-  removeCart(game: Game){
+  removeCart(game: Game): void{
     this.gameService.removeToCart(game);
   }
  
-  togglePopup() {
+  togglePopup(): void {
     this.isPopupOpen = !this.isPopupOpen;
   }
 
@@ -38,7 +38,7 @@ export class GameCartComponent {
 
   finalBuy(): void{
     this.gameService.finalToBuy();
-    this.isPopupOpen = !this.isPopupOpen;
+    this.togglePopup();
   }
  
 

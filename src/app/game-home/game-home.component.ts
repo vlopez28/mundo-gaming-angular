@@ -18,7 +18,8 @@ export class GameHomeComponent {
     this.cartList$ = gameService.cartList.asObservable();
   }
   ngOnInit() {
-    // Verifica si el carrito está vacío
+    // Verifica si el carrito esta vacio, si esta vacio retorna true
+    //pipe: metodo de los observables para encadenar operadores
     this.cartListIsEmpty$ = this.cartList$.pipe(
       map((games : Game[]) => games.length === 0)
     );

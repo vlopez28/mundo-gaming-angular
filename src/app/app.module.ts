@@ -10,6 +10,7 @@ import { GameLogInComponent } from './game-log-in/game-log-in.component';
 import { GameSignInComponent } from './game-sign-in/game-sign-in.component';
 import { ServerModule } from '@angular/platform-server';
 import { HttpClient, HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { StarComponent } from './star/star.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClient, HttpClientModule, provideHttpClient } from '@angular/common
     GameHomeComponent,
     GameOffersComponent,
     GameLogInComponent,
-    GameSignInComponent
+    GameSignInComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,

@@ -50,7 +50,7 @@ export class GameCartService implements OnInit, OnDestroy {
       if (gameIndex !== -1) {
         this._games[gameIndex].bought = false;
         this._games[gameIndex].type = 'ya-es-tuyo';
-        this.games.next([...this._games]); // Emitir una copia de la lista actualizada
+        this.games.next(this._games);// Emitir una copia de la lista actualizada?
       }
     });
     this._cartList = [];
@@ -60,6 +60,7 @@ export class GameCartService implements OnInit, OnDestroy {
   }
 
   removeToCart(game: Game){
+    //
     this._cartList = this._cartList.filter(i => i.title != game.title);
     this.sumTotalCart();
     /*next: emite nuevo valor a todos los suscriptores del behavior subjects
@@ -70,7 +71,7 @@ export class GameCartService implements OnInit, OnDestroy {
     const gameIndex = this._games.findIndex(g => g.title === game.title);
     if (gameIndex !== -1) {
       this._games[gameIndex].bought = false;
-      this.games.next([...this._games]); // Emitir una copia de la lista actualizada
+      this.games.next(this._games); //Emitir una copia de la lista actualizada??
     }
   }
 
@@ -97,9 +98,10 @@ export class GameCartService implements OnInit, OnDestroy {
     this._totalCart = price;
     this.totalCart.next(this._totalCart);
   }
+  //fn que filtra juegos segun busqueda x nombre
   filter(value: string){
     //filter: crea una nueva lista con los elem q pasan la prueba de la fn
-    this._games = this.gamesCopy?.filter(({title} : Game) => {
+    this._games = this.gamesCopy.filter(({title} : Game) => {
       //include:verifica si el título incluye el valor de busqueda, en minusculas ambos
       return title.toLowerCase().includes(value.toLowerCase());
     })

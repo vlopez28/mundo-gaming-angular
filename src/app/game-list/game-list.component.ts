@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Game } from './Game';
 import { GameCartService } from '../game-cart.service';
-import { of, Observable } from 'rxjs';
-import { GameDataService } from '../game-data.service';
+import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-game-list',
   templateUrl: './game-list.component.html',
@@ -24,6 +24,7 @@ export class GameListComponent implements OnInit{
   }
 
 //cambia clase del boton comprar(carrito)
+//si esta comprado lo deshabilita
 getClassCart(game: Game){
   let rdo:{} = {'card-btn-buy': true};
   if(game.bought){
@@ -36,9 +37,9 @@ getClassCart(game: Game){
 }
 
 //setea la propiedad comprado a true
-changeClass(game: Game):void{
-  game.bought = true;
-}
+// changeClass(game: Game):void{
+//   game.bought = true;
+// }
 
 //setea calificacion segun id, segun estrella clickeada
 changeQualification(event: any, game: Game): void {
@@ -46,6 +47,7 @@ changeQualification(event: any, game: Game): void {
 }
 
 //toggle de clases segun calificacion
+//cuando hago click se detecta el cambio y el ngClass reevalua las clases css
 getClassStar(rating: number, game: Game): string {
   return game.qualification >= rating ? 'filled' : 'empty';
 }
