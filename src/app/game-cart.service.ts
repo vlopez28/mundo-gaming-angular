@@ -24,6 +24,7 @@ export class GameCartService implements OnInit, OnDestroy {
   //private _search: string = "";
   search: BehaviorSubject<string> = new BehaviorSubject<string>("");
   
+  //guardo las suscripciones para luego desuscribirme
   private gameSubscription: Subscription;
   private gameCopySubscription: Subscription;
 

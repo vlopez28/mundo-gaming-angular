@@ -46,6 +46,10 @@ $primary-s1: #6f1f91;
 .inputContainer{
     position: relative;
     display: inline-block;
+    
+}
+.inputContainer input{
+    padding-left: 5px;
 }
 
 .inputContainer svg {
@@ -75,6 +79,7 @@ label span {
 
 .recuerdame svg {
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .btn-white {
@@ -87,6 +92,7 @@ label span {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .btn-white img{
     align-items: center;
@@ -97,6 +103,7 @@ label span {
     border-radius: 10px;
     color: $white;
     border: none;
+    cursor: pointer;
 }
 .btn-main-active {
     background-color: $primary;
@@ -140,6 +147,7 @@ label span {
 .btn-third {
     color: $acento;
     text-decoration: underline;
+    cursor: pointer;
 }
 .btn-third:hover {
     color: $acento;
