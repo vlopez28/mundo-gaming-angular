@@ -2,8 +2,8 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, tap, throwError } from 'rxjs';
 import { Game } from './game-list/Game'
-//const URL = 'https://apimocha.com/mundogaming/api/games';
-const URL = 'http://localhost:3000/';
+const URL = 'https://apimocha.com/mundogaming/api/games';
+//const URL = 'http://localhost:3000/';
 
 @Injectable({
   providedIn: 'root'
