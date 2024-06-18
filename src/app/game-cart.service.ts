@@ -36,7 +36,6 @@ export class GameCartService implements OnInit, OnDestroy {
     this.games.next(this._games);
    }
   ngOnInit(): void {
-      throw new Error('Method not implemented.');
   }
 
   ngOnDestroy(): void {

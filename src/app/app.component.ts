@@ -1,19 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { GameCartService } from './game-cart.service';
+import { GameUserService } from './service/game-user.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  //title = 'mundo-gaming';
+export class AppComponent implements OnInit, OnDestroy{
+  userLoginOn: boolean = false;
   open: boolean = false;
- //search$: Observable<string>;
-  constructor(private gameService: GameCartService){
-    //convierte el subject en observable de solo lectura
-    //this.search$ = gameService.search.asObservable();
+  constructor(private gameService: GameCartService,private loginService: GameUserService){
+  }
+  
+  ngOnInit(): void {
+    this.loginService.currentUserLoginOn.subscribe({
+      next:(userLoginOn) =>{
+        this.userLoginOn = userLoginOn;
+      }
+    })
+    
+  }
+  ngOnDestroy(): void {
+    this.loginService.currentUserLoginOn.unsubscribe(); 
+  }
+
+  closeSession(){
+    //this.userLoginOn = false;
+    this.loginService.closeSession();
   }
   filter(event: Event){
     const inputElement = event.target as HTMLInputElement;

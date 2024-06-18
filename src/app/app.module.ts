@@ -8,9 +8,9 @@ import { GameHomeComponent } from './game-home/game-home.component';
 import { GameOffersComponent } from './game-offers/game-offers.component';
 import { GameLogInComponent } from './game-log-in/game-log-in.component';
 import { GameSignInComponent } from './game-sign-in/game-sign-in.component';
-import { ServerModule } from '@angular/platform-server';
-import { HttpClient, HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { StarComponent } from './star/star.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,12 +21,14 @@ import { StarComponent } from './star/star.component';
     GameOffersComponent,
     GameLogInComponent,
     GameSignInComponent,
-    StarComponent
+    StarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule, 
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()

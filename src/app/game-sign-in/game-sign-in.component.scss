@@ -6,11 +6,16 @@ $acento: #F69B12;
 $primary-l2: #eedff4;
 $primary-s3: #53176d;
 $primary-s1: #6f1f91;
+$error-color: #d33636;
+$exit-color: #66b527;
 #login {
     background-image: url('../../assets/image/home/fondoForm.png');
     background-size: cover;
     background-repeat: no-repeat;
     padding: 3%;
+    height: 100vh;
+    display: flex;
+    align-items:flex-start;
 }
 
 
@@ -20,22 +25,25 @@ $primary-s1: #6f1f91;
     color: $white;
     width: 400px;
     border-radius: 10px;
-    flex-shrink: 0;
     text-align: center;
     margin: auto; /*posiciono el contendor en el centro*/
     display: flex;
     flex-direction: column;
-    align-items: center;  
-    position:relative; /*para las burbujas*/
+    align-items: center; 
+    justify-content: space-around ; 
+    padding: 20px 10px;
+    height: 80%;
 }
 
 .titulo {
     margin-top: 20px;
     margin-bottom:20px;
+    color: $acento;
 }
 
 .titulo h3 {
     color: $white;
+    text-shadow: 2px 2px 5px rgba(253, 253, 253, 0.25);
 }
 
 .formField {
@@ -63,6 +71,20 @@ input {
     height: 35px;
     border-radius: 10px;
 }
+
+.containerSesion .ng-valid:not(form).ng-touched{
+    border-left: 5px solid $exit-color;
+}
+.containerSesion .ng-invalid:not(form).ng-touched{
+    border-left: 5px solid $error-color;
+}
+input:focus {
+    border: none;
+}
+.tx-danger{
+    color: $error-color;
+    font-size: 12px;
+}
 label {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -70,33 +92,8 @@ label span {
     color: red;
 }
 
-.recuerdame {
-    width: 320px;
-    display: flex;
-    display: left;
-    justify-content: left;
-}
 
-.recuerdame svg {
-    margin-right: 10px;
-    cursor: pointer;
-}
 
-.btn-white {
-    background-color: $white;
-    width: 50px;
-    height: 35px;
-    border-radius: 10px;
-    border: none;
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-.btn-white img{
-    align-items: center;
-}
 .btn-main {
     width: 320px;
     height: 35px;
@@ -106,6 +103,7 @@ label span {
     cursor: pointer;
 }
 .btn-main-active {
+ 
     background-color: $primary;
 }
 .btn-main-inactive {
@@ -113,6 +111,7 @@ label span {
 }
 .btn-main:hover{
     background-color: $primary-s1;
+    color: $acento;
 }
 .containerSesion input {
     border: none;
@@ -122,21 +121,6 @@ label span {
     margin-top: 20px;
 }
 
-.linea {
-    border: 1px;
-    background-color: $black;
-    width: 95px;
-    height: 1px;
-}
-
-.formFieldRow {
-    width: 350px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 .body2 {
     font-size: 12px;
     line-height: 24px;

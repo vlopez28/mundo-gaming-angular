@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from '../service/User';
 
 @Component({
   selector: 'app-game-log-in',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './game-log-in.component.scss'
 })
 export class GameLogInComponent {
+
+  
 
 }

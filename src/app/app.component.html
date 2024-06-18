@@ -2,7 +2,7 @@
     <header id="header-home">
         <figure>
             
-            <img [routerLink]="['/']" class="logo-header" src="../assets/image/home/logoVioletaOscuro.png" alt="logo">
+        <img [routerLink]="['/']" class="logo-header" src="../assets/image/home/logoVioletaOscuro.png" alt="logo">
         </figure>
         <div class="container-search">
                 <img src="../assets/image/icons/lupaNegra.png" alt="search">
@@ -10,7 +10,7 @@
                     class="input-search" 
                     type="text" 
                     placeholder="Busca tu juego"
-                    (input) = "filter($event)"
+                    (input) = "filter($event)" 
                 >
         </div>
         <div class="container-search-login">
@@ -20,7 +20,11 @@
             </button>
             <button [routerLink]="['/log-in']" class="log-in">REGISTRATE</button>
             <!-- <button>Cerrar Sesion</button> -->
-            <button [routerLink]="['/sign-up']" class="sign-in">INGRESAR</button>
+             @if(!userLoginOn){
+                 <button [routerLink]="['/sign-up']" class="sign-in">INGRESAR</button>
+             } @else if(userLoginOn){
+                <button (click)="closeSession()" [routerLink]="['/sign-up']" class="sign-in">SALIR</button>
+             }
         </div>
         <div class="menu-burger" >
             <button (click)="toggleClass()"><img src="../assets/image/icons/iconHamb.svg" alt="menu-burger"></button>
